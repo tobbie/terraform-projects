@@ -1,0 +1,22 @@
+# AWS Region
+variable "aws_region" {
+  description = "Region in which AWS Resources to be created"
+  type        = string
+  default     = "us-east-1"
+}
+
+# Environment Variable
+variable "environment" {
+  description = "Environment Variable used as a prefix"
+  type        = string
+  default     = "dev"
+}
+
+
+# Business Division
+variable "business-division" {
+  description = "Business Division in large organization........"
+  type        = string
+  default     = "SAP"
+}
+
