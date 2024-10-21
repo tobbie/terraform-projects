@@ -1,2 +1,2 @@
 # terraform-projects
-A collection of AWS infrastructure project built with terraform
+A collection of AWS infrastructure projects built with terraform
