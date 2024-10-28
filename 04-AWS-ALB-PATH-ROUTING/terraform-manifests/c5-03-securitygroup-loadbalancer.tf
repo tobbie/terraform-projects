@@ -1,4 +1,4 @@
-# Private Subnets Security Groups
+#Load Balancer Security Groups
 
 module "load_balancer_sg" {
   source  = "terraform-aws-modules/security-group/aws"

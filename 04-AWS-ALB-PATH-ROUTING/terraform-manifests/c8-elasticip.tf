@@ -11,11 +11,13 @@ resource "aws_eip" "bastion_eip" {
 
   // Works in a resource block
 
+  /**
   provisioner "local-exec" {
     command     = "echo Infra destroy time is `date` >> destroy-time-prov.txt"
-    working_dir = "local-exec-output-files/"
+    working_dir = "local-output-files/"
     #on_failure = continue
     when = destroy
   }
-
+  
+**/
 }

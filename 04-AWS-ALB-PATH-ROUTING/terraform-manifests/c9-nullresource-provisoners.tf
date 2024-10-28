@@ -5,7 +5,7 @@ resource "null_resource" "name" {
   depends_on = [module.public_bastion_server]
 
   connection {
-    host        = aws_eip.bastion_eip.public_ip
+    host        = aws_eip.bastion_eip.public_ip # aws_eip.bastion_eip.public_ip
     type        = "ssh"
     user        = "ec2-user"
     password    = ""
@@ -31,7 +31,7 @@ resource "null_resource" "name" {
 
   provisioner "local-exec" {
     command     = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> vpc-creation-time.txt"
-    working_dir = "local-exec-output-files/"
+    working_dir = "local-output-files/"
     #on_failure = continue
   }
 

@@ -1,12 +1,12 @@
 # Private Instances
 # EC2 instances that will be created in private subnets
 
-module "ec2_private" {
+module "ec2_private_app2" {
   depends_on = [module.vpc]
   source     = "terraform-aws-modules/ec2-instance/aws"
   version    = "5.7.1"
 
-  name = "${var.environment}-vm"
+  name = "${var.environment}-app2"
 
   ami = data.aws_ami.amzlinux2.id
 
@@ -15,7 +15,7 @@ module "ec2_private" {
   #monitoring             = true
 
   vpc_security_group_ids = [module.private_sg.security_group_id]
-  user_data              = file("${path.module}/app1-install.sh")
+  user_data              = file("${path.module}/app2-install.sh")
   for_each               = toset(["0", "1"])
   subnet_id              = element(module.vpc.private_subnets, tonumber(each.key))
 
