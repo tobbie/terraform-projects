@@ -10,7 +10,7 @@ module "private_sg" {
 
   #Ingress Rules
   ingress_cidr_blocks = [module.vpc.vpc_cidr_block]
-  ingress_rules       = ["ssh-tcp", "http-80-tcp"]
+  ingress_rules       = ["ssh-tcp", "http-80-tcp", "http-8080-tcp"]
 
 
   # Egress Rules - all-all open

@@ -24,6 +24,13 @@ variable "db_username" {
 variable "db_password" {
   description = "AWS RDS Database Administrator Password"
   type        = string
-  sensitive = true
+  sensitive   = true
+}
+
+# DB Port
+variable "db_port" {
+  description = "AWS RDS Database Administrator Password"
+  type        = number
+  sensitive   = true
 }
 

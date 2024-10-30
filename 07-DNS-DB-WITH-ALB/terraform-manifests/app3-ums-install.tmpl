@@ -5,7 +5,7 @@ mkdir /home/ec2-user/app3-usermgmt && cd /home/ec2-user/app3-usermgmt
 wget https://github.com/stacksimplify/temp1/releases/download/1.0.0/usermgmt-webapp.war -P /home/ec2-user/app3-usermgmt 
 export DB_HOSTNAME=${rds_db_endpoint}
 export DB_PORT=3306
-export DB_NAME=webappdb
-export DB_USERNAME=dbadmin
-export DB_PASSWORD=dbpassword11
+export DB_NAME=${rds_db_name}
+export DB_USERNAME=${rds_db_username}
+export DB_PASSWORD=${rds_db_password}
 java -jar /home/ec2-user/app3-usermgmt/usermgmt-webapp.war > /home/ec2-user/app3-usermgmt/ums-start.log &
