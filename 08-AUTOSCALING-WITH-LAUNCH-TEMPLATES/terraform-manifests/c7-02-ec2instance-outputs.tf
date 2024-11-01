@@ -12,6 +12,7 @@ output "ec2_bastion_public_ip" {
 
 }
 
+/**
 #APP1 - Private EC2 Instances
 ## private instance ids
 output "app1_ec2_private_instance_ids" {
@@ -43,3 +44,5 @@ output "app2_ec2_private_instance_ips" {
   value       = [for instance in module.ec2_private_app2 : instance.private_ip]
 
 }
+
+**/

@@ -1,6 +1,7 @@
 # Private Instances
 # EC2 instances that will be created in private subnets
 
+/**
 module "ec2_private_app2" {
   depends_on = [module.vpc]
   source     = "terraform-aws-modules/ec2-instance/aws"
@@ -21,3 +22,5 @@ module "ec2_private_app2" {
 
   tags = local.common_tags
 }
+
+**/

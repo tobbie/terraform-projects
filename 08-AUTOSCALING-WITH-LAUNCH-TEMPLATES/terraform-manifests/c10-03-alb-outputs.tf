@@ -54,6 +54,17 @@ output "target_groups" {
   value       = module.alb.target_groups
 }
 
+/**
+output "target_group_arns" {
+  description = "ARNs of the target groups. Useful for passing to your Auto Scaling group."
+  value       = module.alb.target_group_arns
+}
+
+output "target_group_arn_suffixes" {
+  description = "ARN suffixes of our target groups - can be used with CloudWatch."
+  value       = module.alb.target_group_arn_suffixes
+}
+**/
 ################################################################################
 # Security Group
 ################################################################################
